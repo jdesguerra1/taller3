@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Menu {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        int opcion = 0;
+        try (Scanner sc = new Scanner(System.in)) {
+            int opcion = 0;
 
-        while (opcion != 5) {
+            while (opcion != 5) {
             System.out.println("===== SISTEMA E-COMMERCE =====");
             System.out.println("1. Ver productos ordenados por precio");
             System.out.println("2. Agregar un nuevo cliente");
@@ -27,42 +27,43 @@ public class Menu {
                 case 2:
                     // Jairo
 
-                    try {
+try {
 
-                        Scanner sc2 = new Scanner(System.in);
+    Scanner sc2 = new Scanner(System.in);
 
-                        BufferedReader br = new BufferedReader(new FileReader("clientes.csv"));
-                        String linea;
-                        int ultimoId = 0;
+    BufferedReader br = new BufferedReader(new FileReader("clientes.csv"));
+    String linea;
+    int ultimoId = 0;
 
-                        br.readLine();
+    br.readLine();
 
-                        while ((linea = br.readLine()) != null) {
-                            String[] datos = linea.split(",");
-                            ultimoId = Integer.parseInt(datos[0]);
-                        }
+    while ((linea = br.readLine()) != null) {
+        String[] datos = linea.split(",");
+        ultimoId = Integer.parseInt(datos[0]);
+    }
 
-                        br.close();
+    br.close();
 
-                        int nuevoId = ultimoId + 1;
+    int nuevoId = ultimoId + 1;
 
-                        System.out.print("Ingrese nombre del cliente: ");
-                        String nombre = sc2.nextLine();
+    System.out.print("Ingrese nombre del cliente: ");
+    String nombre = sc2.nextLine();
 
-                        System.out.print("Ingrese email del cliente: ");
-                        String email = sc2.nextLine();
+    System.out.print("Ingrese email del cliente: ");
+    String email = sc2.nextLine();
 
-                        FileWriter fw = new FileWriter("clientes.csv", true);
-                        fw.write("\n" + nuevoId + "," + nombre + "," + email);
-                        fw.close();
+    FileWriter fw = new FileWriter("clientes.csv", true);
+    fw.write("\n" + nuevoId + "," + nombre + "," + email);
+    fw.close();
 
-                        System.out.println("Cliente agregado correctamente.");
+    System.out.println("Cliente agregado correctamente.");
 
-                    } catch (IOException e) {
-                        System.out.println("Error al agregar cliente.");
-                    }
+    sc2.close();
 
-                    break;
+} catch (IOException e) {
+    System.out.println("Error al agregar cliente.");
+}
+break;
                 case 3:
                     // Jesus
                     break;
@@ -73,8 +74,8 @@ public class Menu {
                     // Quin sea
                 default:
                     break;
-            }
-
+                }
+            } 
         }
     }
 }
