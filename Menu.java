@@ -31,11 +31,11 @@ public class Menu {
                     break;
 
                 case 3:
-                    Opcion3.CalcularelTotaldeVentasporProducto();
+                    // Daniela
                     break;
 
                 case 4:
-                    //jesus;
+                    // Jesus
                     break;
 
                 case 5:
