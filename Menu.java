@@ -28,7 +28,7 @@ public class Menu {
                     Opcion2.AgregarunNuevoCliente();
                     break;
                 case 3:
-                    // Jesus
+                    Opcion3.CalcularelTotaldeVentasporProducto();
                     break;
                 case 4:
                     // Daniela
@@ -36,9 +36,9 @@ public class Menu {
                 case 5:
                     // Quin sea
                 default:
-                    break;
-                }
-            } 
+                    System.out.println("Opción inválida");
+            }
+
         }
     }
 }

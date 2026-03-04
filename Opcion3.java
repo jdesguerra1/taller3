@@ -4,13 +4,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Opcion3 {
-    public static void  CalcularelTotaldeVentasporProducto() {
-         try {
+public class Opcion3{
+    public static void CalcularelTotaldeVentasporProducto(){
+    try {
 
                         //LEER PRODUCTOS
                         BufferedReader brProductos =
-                                new BufferedReader(new FileReader("Productos.csv"));
+                                new BufferedReader(new FileReader("productos.csv"));
 
                         String linea = brProductos.readLine();
 
@@ -119,7 +119,5 @@ public class Opcion3 {
                     } catch (IOException e) {
                         System.out.println("Error leyendo archivos: " + e.getMessage());
                     }
-    
-        
-    }
-}
+
+}}
