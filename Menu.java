@@ -24,8 +24,9 @@ public class Menu{
                 case 2:
                     //Jairo
                     break;
-                case 3:            
-public class totalVentas {
+                case 3:   
+                    break;         
+
 
     public static void opcion3() {
 
