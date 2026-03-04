@@ -27,10 +27,10 @@ public class Menu {
                     // Jairo
                     break;
                 case 3:
-                    // Jesus
+                    // Daniela
                     break;
                 case 4:
-                    // Daniela
+                    // Jesus
                     break;
                 case 5:
                     // Quin sea
