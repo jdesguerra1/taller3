@@ -1,11 +1,15 @@
+import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
-public class Menu{
-    public static void main (String[] args) {
 
-        Scanner sc=new Scanner(System.in);
-        int opcion=0;
 
-        while (opcion!=5) {
+public class Menu {
+    public static void main(String[] args) throws IOException {
+
+        Scanner sc = new Scanner(System.in);
+        int opcion = 0;
+
+        while (opcion != 5) {
             System.out.println("===== SISTEMA E-COMMERCE =====");
             System.out.println("1. Ver productos ordenados por precio");
             System.out.println("2. Agregar un nuevo cliente");
@@ -17,23 +21,23 @@ public class Menu{
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
-                    //Jose
+                    Opcion1.mostrarProductosOrdenados();
                     break;
                 case 2:
-                    //Jairo
+                    // Jairo
                     break;
                 case 3:
-                    //Jesus
+                    // Jesus
                     break;
                 case 4:
-                    //Daniela
+                    // Daniela
                     break;
                 case 5:
-                    //  Quin sea
+                    // Quin sea
                 default:
                     break;
             }
-            
+
         }
     }
 }
