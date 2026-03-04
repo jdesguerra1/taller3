@@ -37,7 +37,7 @@ public class Menu{
         ArrayList<Cliente> compradores = new ArrayList<>();
 
         // Leer clientes
-        BufferedReader brClientes = new BufferedReader(new FileReader("clientes.csv"));
+        BufferedReader brClientes = new BufferedReader(new FileReader("pedidos.csv"));
         String linea = brClientes.readLine(); // saltar encabezado
 
         while ((linea = brClientes.readLine()) != null) {
