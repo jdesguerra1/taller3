@@ -1,15 +1,16 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
 import java.util.Scanner;
 
-
 public class Menu {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        int opcion = 0;
+        try (Scanner sc = new Scanner(System.in)) {
+            int opcion = 0;
 
-        while (opcion != 5) {
+            while (opcion != 5) {
             System.out.println("===== SISTEMA E-COMMERCE =====");
             System.out.println("1. Ver productos ordenados por precio");
             System.out.println("2. Agregar un nuevo cliente");
@@ -19,25 +20,19 @@ public class Menu {
             System.out.print("Seleccione una opción: ");
 
             opcion = sc.nextInt();
-
             switch (opcion) {
-
                 case 1:
-                    Opcion1.mostrarProductosOrdenados();
+                    // Jose
                     break;
-
                 case 2:
-                    // Jairo
+                    Opcion2.AgregarunNuevoCliente();
                     break;
-
                 case 3:
                     Opcion3.CalcularelTotaldeVentasporProducto();
                     break;
-
                 case 4:
-                    //jesus;
+                    // Daniela
                     break;
-
                 case 5:
                     // Quin sea
                 default:
@@ -45,9 +40,5 @@ public class Menu {
             }
 
         }
-
-        sc.close();
     }
 }
-            
-        
