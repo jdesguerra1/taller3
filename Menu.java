@@ -36,7 +36,7 @@ public class totalVentas {
 
             BufferedReader brProductos = new BufferedReader(new FileReader("productos.csv"));
 
-            String linea = brProductos.readLine(); // saltar encabezado
+            String linea = brProductos.readLine(); 
 
             int MAX = 100;
 
