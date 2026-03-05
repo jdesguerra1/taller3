@@ -11,7 +11,7 @@ try {
         ArrayList<Cliente> compradores = new ArrayList<>();
 
         // Leer clientes
-        BufferedReader brClientes = new BufferedReader(new FileReader("Clientes.csv"));
+        BufferedReader brClientes = new BufferedReader(new FileReader("clientes.csv"));
         String linea = brClientes.readLine(); // saltar encabezado
 
         while ((linea = brClientes.readLine()) != null) {
